@@ -1,29 +1,46 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   minitalk.h                                         :+:      :+:    :+:   */
+/*   ft_lstlast_bonus.c                                 :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: denpolat <denpolat@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2026/07/02 22:51:44 by denpolat          #+#    #+#             */
-/*   Updated: 2026/07/03 04:07:51 by denpolat         ###   ########.fr       */
+/*   Created: 2025/10/16 19:36:27 by denpolat          #+#    #+#             */
+/*   Updated: 2025/10/19 18:20:43 by denpolat         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-
-#ifndef MINITALK_H
-#define MINITALK_H
-
 #include "libft.h"
-#include "ft_printf.h"
-#include <signal.h>
 
+t_list	*ft_lstlast(t_list *lst)
+{
+	t_list	*tmp;
 
+	if (!lst)
+		return (NULL);
+	tmp = lst;
+	while (tmp->next)
+	{
+		tmp = tmp->next;
+	}
+	return (tmp);
+}
+/*int	main()
+{
+	t_list	*a = ft_lstnew("koi");
+	t_list	*b = ft_lstnew("kou");
+	t_list	*c = ft_lstnew("beh");
 
-#endif
+	a->next = b;
+	b->next = c;
 
+	t_list	*last = ft_lstlast(a);
 
+	if (last)
+		printf("%s\n", (char *)last->content);
+	free(a);
+	free(b);
+	free(c);
+	//return(0);
 
-
-
-
+}*/

@@ -1,29 +1,22 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   minitalk.h                                         :+:      :+:    :+:   */
+/*   ft_isascii.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: denpolat <denpolat@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2026/07/02 22:51:44 by denpolat          #+#    #+#             */
-/*   Updated: 2026/07/03 04:07:51 by denpolat         ###   ########.fr       */
+/*   Created: 2025/10/15 00:00:41 by denpolat          #+#    #+#             */
+/*   Updated: 2025/10/15 00:00:44 by denpolat         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-
-#ifndef MINITALK_H
-#define MINITALK_H
-
 #include "libft.h"
-#include "ft_printf.h"
-#include <signal.h>
 
-
-
-#endif
-
-
-
-
-
-
+int	ft_isascii(int c)
+{
+	if (c >= 0 && c <= 127)
+	{
+		return (1);
+	}
+	return (0);
+}

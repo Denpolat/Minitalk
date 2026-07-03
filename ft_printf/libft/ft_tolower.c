@@ -1,29 +1,32 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   minitalk.h                                         :+:      :+:    :+:   */
+/*   ft_tolower.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: denpolat <denpolat@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2026/07/02 22:51:44 by denpolat          #+#    #+#             */
-/*   Updated: 2026/07/03 04:07:51 by denpolat         ###   ########.fr       */
+/*   Created: 2025/10/14 22:41:08 by denpolat          #+#    #+#             */
+/*   Updated: 2025/10/14 22:41:29 by denpolat         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-
-#ifndef MINITALK_H
-#define MINITALK_H
-
 #include "libft.h"
-#include "ft_printf.h"
-#include <signal.h>
 
+int	ft_tolower(int c)
+{
+	if (c >= 'A' && c <= 'Z')
+	{
+		c = c + 32;
+		return (c);
+	}
+	else
+		return (c);
+}
+/*
+#include<stdio.h>
 
-
-#endif
-
-
-
-
-
-
+int main(void)
+{
+	printf ("%c", ft_tolower(65));
+}
+*/

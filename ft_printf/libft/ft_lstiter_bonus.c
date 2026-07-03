@@ -1,29 +1,25 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   minitalk.h                                         :+:      :+:    :+:   */
+/*   ft_lstiter_bonus.c                                 :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: denpolat <denpolat@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2026/07/02 22:51:44 by denpolat          #+#    #+#             */
-/*   Updated: 2026/07/03 04:07:51 by denpolat         ###   ########.fr       */
+/*   Created: 2025/10/19 17:37:21 by denpolat          #+#    #+#             */
+/*   Updated: 2025/10/19 18:18:26 by denpolat         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-
-#ifndef MINITALK_H
-#define MINITALK_H
-
 #include "libft.h"
-#include "ft_printf.h"
-#include <signal.h>
 
+void	ft_lstiter(t_list *lst, void (*f)(void *))
+{
+	t_list	*tmp;
 
-
-#endif
-
-
-
-
-
-
+	tmp = lst;
+	while (tmp)
+	{
+		f(tmp->content);
+		tmp = tmp->next;
+	}
+}

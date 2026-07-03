@@ -1,29 +1,27 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   minitalk.h                                         :+:      :+:    :+:   */
+/*   ft_isalpha.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: denpolat <denpolat@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2026/07/02 22:51:44 by denpolat          #+#    #+#             */
-/*   Updated: 2026/07/03 04:07:51 by denpolat         ###   ########.fr       */
+/*   Created: 2025/09/30 11:56:31 by denpolat          #+#    #+#             */
+/*   Updated: 2025/10/19 17:45:59 by denpolat         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-
-#ifndef MINITALK_H
-#define MINITALK_H
-
 #include "libft.h"
-#include "ft_printf.h"
-#include <signal.h>
 
-
-
-#endif
-
-
-
-
-
-
+int	ft_isalpha(int c)
+{
+	if (!c)
+	{
+		return (0);
+	}
+	if ((c >= 'a' && c <= 'z') || (c >= 'A' && c <= 'Z'))
+	{
+		return (1);
+	}
+	else
+		return (0);
+}
